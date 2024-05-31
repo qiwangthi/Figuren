@@ -1,3 +1,5 @@
+import java.awt.Graphics;
+
 public class Person extends Figuren {
     private final int mainBodyWidth = 10;
     private final int mainBodyHeight = 10;
@@ -56,5 +58,11 @@ public class Person extends Figuren {
 
     public int getWidth() {
         return (armsWidth * 2 + mainBodyWidth) * getFactor();
+    }
+
+    @Override
+    public void paintOnGraphics(Graphics g) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'paintOnGraphics'");
     }
 }

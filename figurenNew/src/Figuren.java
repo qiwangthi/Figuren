@@ -1,3 +1,5 @@
+import java.awt.Graphics;
+
 public abstract class Figuren {
     private final int factor = (int) (Math.random() * 10 + 7);
     private int offsetLeft;

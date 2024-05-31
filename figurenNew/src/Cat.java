@@ -1,3 +1,5 @@
+import java.awt.Graphics;
+
 public class Cat extends Figuren {
     private final int mainBodyWidth = 10;
     private final int mainBodyHeight = 4;
@@ -56,6 +58,12 @@ public class Cat extends Figuren {
 
     public int getWidth() {
         return (int) ((tailWidth + mainBodyWidth + headRadius * 0.75) * getFactor());
+    }
+
+    @Override
+    public void paintOnGraphics(Graphics g) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'paintOnGraphics'");
     }
 
 }
