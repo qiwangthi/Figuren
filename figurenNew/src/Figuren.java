@@ -1,11 +1,11 @@
 import java.awt.Graphics;
 
-public abstract class Figur {
+public abstract class Figuren {
     private final int factor = (int) (Math.random() * 10 + 7);
     private int offsetLeft;
     private int maxHeightPanel;
 
-    public Figur(int factor, int offsetLeft, int maxHeightPanel) {
+    public Figuren(int factor, int offsetLeft, int maxHeightPanel) {
         this.offsetLeft = offsetLeft;
         this.maxHeightPanel = maxHeightPanel;
 

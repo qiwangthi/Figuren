@@ -1,6 +1,6 @@
 import java.awt.Graphics;
 
-public class Person extends Figuren {
+public class Person extends Figur {
     private final int mainBodyWidth = 10;
     private final int mainBodyHeight = 10;
     private final int legsWidth = 4;

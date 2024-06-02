@@ -7,7 +7,7 @@ import java.util.Random;
 
 public static void main(String[] args) throws Exception {
 
-    Figuren[] figuren = new Figuren[10];
+    Figur[] figuren = new Figur[10];
     // 0-4 are cats, 5-9 are persons
     for (int i = 0; i < figuren.length; i++) {
         if (i < 5) {
@@ -20,7 +20,7 @@ public static void main(String[] args) throws Exception {
     for (int i = 0; i < figuren.length; i++) {
         for (int j = 1 + i; j < figuren.length; j++) {
             if (figuren[i].getHeight() > figuren[j].getHeight()) {
-                Figuren temp = figuren[i];
+                Figur temp = figuren[i];
                 figuren[i] = figuren[j];
                 figuren[j] = temp;
             }
