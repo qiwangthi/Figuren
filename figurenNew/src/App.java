@@ -30,7 +30,7 @@ public static void main(String[] args) throws Exception {
     int maxHeightPanel = 0;
     int spaceBetweenFigures = (int) (Math.random() * 10 + 5);
     for (int i = 0; i < figuren.length; i++) {
-        totalWidthPanel += figuren[i].getWidth() + spaceBetweenFigures * (figuren.length + 1);
+        totalWidthPanel += figuren[i].getWidth() + spaceBetweenFigures;
         if (figuren[i].getHeight() > maxHeightPanel) {
             maxHeightPanel = figuren[i].getHeight();
         }
@@ -41,6 +41,8 @@ public static void main(String[] args) throws Exception {
     frame.add(panel);
     frame.setSize(totalWidthPanel, maxHeightPanel);
     panel.setBackground(Color.BLACK);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setVisible(true);
     /*
      * for-Schleife von jeder Figur die Methode paintOnGraphics(g, offsetLegt,
      * maxHeightPanel) aufgerufen werden und die Variable offsetLeft mit jeder
