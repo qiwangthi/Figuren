@@ -33,6 +33,7 @@ public abstract class Figur {
     public abstract void paintOnGraphics(Graphics g);
 
     public void paintOnGraphics(Graphics g, int offsetLeft, int maxHeightPanel) {
+        // int offsetTop = maxHeightPanel - this.getHeight();
         this.offsetLeft = offsetLeft;
         this.maxHeightPanel = maxHeightPanel;
         paintOnGraphics(g);

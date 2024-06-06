@@ -67,10 +67,13 @@ public class Cat extends Figur {
         return (int) ((tailWidth + mainBodyWidth + headRadius * 0.75) * getFactor());
     }
 
-    @Override
     public void paintOnGraphics(Graphics g) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'paintOnGraphics'");
+        // drawHead(g);
+        // drawEars(g);
+        // drawMainBody(g);
+        // drawLegs(g);
+        // drawTail(g);
+
     }
 
 }

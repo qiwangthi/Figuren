@@ -1,6 +1,7 @@
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.Color;
+import java.awt.Graphics;
 
 public static void main(String[] args) throws Exception {
 
@@ -40,6 +41,7 @@ public static void main(String[] args) throws Exception {
     panel.setBackground(Color.BLACK);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.setVisible(true);
+
     /*
      * for-Schleife von jeder Figur die Methode paintOnGraphics(g, offsetLegt,
      * maxHeightPanel) aufgerufen werden und die Variable offsetLeft mit jeder
