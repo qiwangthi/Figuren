@@ -11,47 +11,6 @@ public class Person extends Figur {
     private final int armsHeight = 8;
     private final int armsWidth = 3;
 
-    public Person(int factor, int offsetLeft, int maxHeightPanel, int mainBodyWidth, int mainBodyHeight, int legsWidth,
-            int legsHeight, int headRadius, int neckWidth, int neckHeight, int armsHeight, int armsWidth) {
-        super(factor, offsetLeft, maxHeightPanel);
-    }
-
-    public int getMainBodyWidth() {
-        return mainBodyWidth;
-    }
-
-    public int getMainBodyHeight() {
-        return mainBodyHeight;
-    }
-
-    public int getLegsWidth() {
-        return legsWidth;
-    }
-
-    public int getLegsHeight() {
-        return legsHeight;
-    }
-
-    public int getHeadRadius() {
-        return headRadius;
-    }
-
-    public int getNeckWidth() {
-        return neckWidth;
-    }
-
-    public int getNeckHeight() {
-        return neckHeight;
-    }
-
-    public int getArmsHeight() {
-        return armsHeight;
-    }
-
-    public int getArmsWidth() {
-        return armsWidth;
-    }
-
     public int getHeight() {
         return (int) ((legsHeight + mainBodyHeight + headRadius * 0.75 + neckHeight) * getFactor());
     }

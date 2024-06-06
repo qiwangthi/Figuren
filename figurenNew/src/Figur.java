@@ -1,9 +1,12 @@
 import java.awt.Graphics;
 
 public abstract class Figur {
-    private final int factor = (int) (Math.random() * 10 + 7);
-    private int offsetLeft;
-    private int maxHeightPanel;
+    protected final int factor = (int) (Math.random() * 10 + 7);
+    protected int offsetLeft;
+    protected int maxHeightPanel;
+
+    public Figur() {
+    }
 
     public Figur(int factor, int offsetLeft, int maxHeightPanel) {
         this.offsetLeft = offsetLeft;
