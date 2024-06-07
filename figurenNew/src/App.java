@@ -1,7 +1,5 @@
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 import java.awt.Color;
-import java.awt.Graphics;
 
 public static void main(String[] args) throws Exception {
 
@@ -33,25 +31,19 @@ public static void main(String[] args) throws Exception {
             maxHeightPanel = figuren[i].getHeight();
         }
     }
-
     JFrame frame = new JFrame();
-    JPanel panel = new JPanel();
+    MyPanel panel = new MyPanel(figuren);
     frame.add(panel);
     frame.setSize(totalWidthPanel, maxHeightPanel);
     panel.setBackground(Color.BLACK);
-    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.setVisible(true);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+;
 
-    /*
-     * for-Schleife von jeder Figur die Methode paintOnGraphics(g, offsetLegt,
-     * maxHeightPanel) aufgerufen werden und die Variable offsetLeft mit jeder
-     * gezeichneten Figur um deren Breite und einen spaceBetweenFigurs erhöht
-     * werden, sodass die Figuren auch nebeneinander angezeigt werden.
-     */
-    int offsetLeft = spaceBetweenFigures;
-    for (int i = 0; i < figuren.length; i++) {
-        figuren[i].paintOnGraphics(panel.getGraphics(), offsetLeft, maxHeightPanel);
-        offsetLeft += figuren[i].getWidth() + spaceBetweenFigures;
-    }
+   // int offsetLeft = spaceBetweenFigures;
+   // for (int i = 0; i < figuren.length; i++) {
+       // figuren[i].paintOnGraphics(panel.getGraphics(), offsetLeft, maxHeightPanel);
+       // offsetLeft += figuren[i].getWidth() + spaceBetweenFigures;
+    //}
 
 }
