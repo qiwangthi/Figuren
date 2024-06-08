@@ -64,6 +64,9 @@ public class Person extends Figur {
         g.fillRect(beinL_x, beinL_y, bein_breite, bein_hoehe);
         g.fillRect(beinR_x, beinR_y, bein_breite, bein_hoehe);
 
+        //set color
+        g.setColor(getColor());
+
 
 
 

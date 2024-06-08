@@ -68,6 +68,9 @@ public class Cat extends Figur {
         int ohr_hoehe = earsHeight * factor;
         g.fillRect(ohr_x, ohr_y, ohr_breite, ohr_hoehe);
 
+        //set the color of the cat
+        g.setColor(getColor());
+
 
     }
 

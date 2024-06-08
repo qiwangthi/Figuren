@@ -1,13 +1,18 @@
 import java.awt.Graphics;
+import java.awt.Color;
+import java.util.Random;
 
 public abstract class Figur {
     protected final int factor = (int) (Math.random() * 10 + 7);
     protected int offsetLeft;
     protected int maxHeightPanel;
+    protected Color color;
+
 
     public Figur() {
+        Random rand = new Random();
+        this.color = new Color(rand.nextInt(256), rand.nextInt(256), rand.nextInt(256));
     }
-
     public Figur(int factor, int offsetLeft, int maxHeightPanel) {
         this.offsetLeft = offsetLeft;
         this.maxHeightPanel = maxHeightPanel;
@@ -24,6 +29,9 @@ public abstract class Figur {
 
     public int getMaxHeightPanel() {
         return maxHeightPanel;
+    }
+    public Color getColor() {
+        return color;
     }
 
     public abstract int getHeight();
