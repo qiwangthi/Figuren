@@ -20,11 +20,15 @@ import java.awt.Color;
         protected void paintComponent(Graphics g) {
             super.paintComponent(g);
             g.setColor(getRandomColor());
+           //paint every figure with ramdom color
+           
+        
           
             int offsetLeft = 0;
+            int spaceBetweenFigures = (int) (Math.random() * 10 + 5);
             for (int i = 0; i < figuren.length; i++) {
             figuren[i].paintOnGraphics(g, offsetLeft, this.getHeight());
-            offsetLeft += figuren[i].getWidth();
+            offsetLeft += figuren[i].getWidth()+ spaceBetweenFigures;
             }
         }
     }
