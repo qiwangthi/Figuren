@@ -1,5 +1,7 @@
-import javax.swing.JFrame;
 import java.awt.Color;
+
+import javax.swing.JFrame;
+
 
 public static void main(String[] args) throws Exception {
 
@@ -26,19 +28,26 @@ public static void main(String[] args) throws Exception {
     int maxHeightPanel = 0;
     int spaceBetweenFigures = (int) (Math.random() * 10 + 5);
     for (int i = 0; i < figuren.length; i++) {
-        totalWidthPanel += figuren[i].getWidth() + spaceBetweenFigures;
+        totalWidthPanel += spaceBetweenFigures+figuren[i].getWidth(); 
+         if (i == figuren.length - 1) {
+            totalWidthPanel += spaceBetweenFigures;
         if (figuren[i].getHeight() > maxHeightPanel) {
             maxHeightPanel = figuren[i].getHeight();
         }
     }
+}
     JFrame frame = new JFrame();
+    frame.setSize(totalWidthPanel, maxHeightPanel);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     MyPanel panel = new MyPanel(figuren);
     frame.add(panel);
-    frame.setSize(totalWidthPanel, maxHeightPanel);
     panel.setBackground(Color.BLACK);
     frame.setVisible(true);
-    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-;
+    panel.paintComponent(panel.getGraphics());          
+
+
+    
+
 
    // int offsetLeft = spaceBetweenFigures;
    // for (int i = 0; i < figuren.length; i++) {
@@ -47,3 +56,4 @@ public static void main(String[] args) throws Exception {
     //}
 
 }
+
